@@ -1,0 +1,256 @@
+package >
+{Pkg.Name}
+Package {Pkg.Stereotype} in package '{Pkg.ParentPackage}'
+
+{Pkg.Notes}
+
+{Pkg.Name}
+Version {Pkg.Version}  Phase {Pkg.Phase}  {Pkg.Status}
+{Pkg.Author} created on {Pkg.DateCreatedShort}.  Last modified {Pkg.DateModifiedShort}
+Alias {Pkg.Alias}
+package element >
+linked document >
+< linked document
+requirement >
+
+RESPONSIBILITIES (INTERNAL REQUIREMENTS)
+
+  {ElemRequirement.Type}.  {ElemRequirement.Name}
+
+{ElemRequirement.Notes}
+[ {ElemRequirement.Status}, {ElemRequirement.Difficulty} difficulty ]
+
+< requirement
+external requirements >
+
+EXTERNAL REQUIREMENTS
+
+  {ElemExtRequirement.Type}.  {ElemExtRequirement.Name}
+
+{ElemExtRequirement.Notes}
+[ Stereotype is {ElemExtRequirement.Stereotype} ]
+
+< external requirements
+scenario >
+
+SCENARIOS
+
+  {ElemScenario.Type}.  {ElemScenario.Scenario}
+
+{ElemScenario.Notes}
+structured scenarios >
+
+{Scenario_Structured.Step}. {Scenario_Structured.Action}
+Uses: 
+{Scenario_Structured.Uses}
+exception >
+{Exception.Type}:  {Exception.Step}.    {Exception.Name} 
+< exception
+< structured scenarios
+< scenario
+constraint >
+
+CONSTRAINTS
+
+  {ElemConstraint.Type}.  {ElemConstraint.Name}
+
+{ElemConstraint.Notes}
+[ {ElemConstraint.Status}, weight is {ElemConstraint.Weight} ]
+
+< constraint
+file >
+
+ASSOCIATED FILES
+
+  {ElemFile.Type}.  {ElemFile.FilePath}
+
+{ElemFile.Notes}
+[ Size is {ElemFile.Size} ]
+
+< file
+task >
+
+TASKS
+
+  {ElemTask.Status}, {ElemTask.Priority} priority.  {ElemTask.Task}
+
+Raised on:	{ElemTask.DateRequested}
+Completed:	{ElemTask.CompletedDateShort}
+
+{ElemTask.TaskNotes}
+
+History:
+{ElemTask.History}
+[ Requested by {ElemTask.RequestedBy}. Completed by {ElemTask.CompletedBy}.  Version {ElemTask.Version}. ]
+
+< task
+issue >
+
+ISSUES
+
+  {ElemIssue.Status}, {ElemIssue.Priority} priority.  {ElemIssue.Issue}
+
+Raised on:	{ElemIssue.DateReported}
+Resolved:	{ElemIssue.ResolvedDateShort}
+
+{ElemIssue.Notes}
+
+History:
+{ElemIssue.History}
+[ Reported by {ElemIssue.RaisedBy}. Resolved by {ElemIssue.ResolvedBy}. Version {ElemIssue.Version}. ]
+
+< issue
+change >
+
+CHANGES
+
+  {ElemChange.Status}, {ElemChange.Priority} priority.  {ElemChange.Problem}
+
+Requested on:	{ElemChange.DateRequested}
+Resolved:	{ElemChange.ResolvedDateShort}
+
+{ElemChange.ProblemNotes}
+
+History:
+{ElemChange.ResolverNotes}
+[ Requested by {ElemChange.ReportedBy}. Resolved by {ElemChange.ResolvedBy}. Version {ElemChange.Version}. ]
+
+< change
+defect >
+
+DEFECTS
+
+  {ElemDefect.Status}, {ElemDefect.Priority} priority.  {ElemDefect.Problem}
+
+Raised on:	{ElemDefect.DateReported}
+Resolved:	{ElemDefect.ResolvedDateShort}
+
+{ElemDefect.ProblemNotes}
+
+History:
+{ElemDefect.ResolverNotes}
+[ Reported by {ElemDefect.ReportedBy}. Resolved by {ElemDefect.ResolvedBy}. Version {ElemDefect.Version}. ]
+
+< defect
+resource >
+
+ALLOCATED PROJECT RESOURCES
+
+  {ElemResource.Resource}.  {ElemResource.Role}
+Start:	{ElemResource.StartDate}
+End:	{ElemResource.EndDate}
+
+{ElemResource.Description}
+
+History:
+{ElemResource.History}
+[ Completed: {ElemResource.PercentComplete}% ( Actual: {ElemResource.ActualHours} Expected: {ElemResource.ExpectedHours} Time: {ElemResource.Time} ) ]
+
+< resource
+effort >
+
+EFFORT
+
+  {ElemEffort.Type} effort.  {ElemEffort.Effort}
+
+{ElemEffort.Notes}
+[ Time is {ElemEffort.Value}. ]
+
+< effort
+metric >
+
+METRICS
+
+  {ElemMetric.Type} metric.  {ElemMetric.Metric}
+
+{ElemMetric.Notes}
+[ Weight is {ElemMetric.Value}. ]
+
+< metric
+risk >
+
+RISKS
+
+  {ElemRisk.Type} risks.  {ElemRisk.Risk}
+
+{ElemRisk.Notes}
+[ Weight is {ElemRisk.Value}. ]
+
+< risk
+test >
+
+TESTING
+
+  {ElemTest.Type}  {ElemTest.Class} test.  {ElemTest.Name}
+
+Description:  {ElemTest.Notes}
+
+Input:  {ElemTest.Input}
+
+Acceptance Criteria:  {ElemTest.AcceptanceCriteria}
+
+Results:  {ElemTest.TestResults}
+[ Last run {ElemTest.Status} at {ElemTest.RunDateShort} by {ElemTest.RunBy} and checked by{ElemTest.CheckedBy}. ]
+
+< test
+< package element
+connector >
+
+LINKS TO OTHER PACKAGES
+
+  {Connector.Type} from source >element >'{Element.Name}' {Element.Type} {Element.Stereotype}< element< source to target >element >'{Element.Name}' {Element.Type} {Element.Stereotype}< element< target
+
+
+{Connector.Notes}
+	
+Name:	{Connector.Name}
+Direction:	{Connector.Direction}
+
+< connector
+child packages >
+< child packages
+
+
+diagram >
+{Diagram.Name} diagram
+{Diagram.Type} diagram {Diagram.Stereotype} in package '{Diagram.ParentPackage}'
+
+{Diagram.Notes}
+
+{Diagram.Name} 
+Version {Diagram.Version}
+{Diagram.Author} created on {Diagram.DateCreatedShort}.  Last modified {Diagram.DateModifiedShort}
+
+{Diagram.DiagramImg}
+
+{Diagram.Name}
+
+element >
+< element
+messages >
+
+INTERACTION MESSAGES
+
+  {DiagramMsgs.Sequence} '{DiagramMsgs.Message}' from '{DiagramMsgs.FromElement}' sent to '{DiagramMsgs.ToElement}'.  
+
+When "{DiagramMsgs.Condition}".  {DiagramMsgs.SynchType} {DiagramMsgs.SynchKind}.  Returns {DiagramMsgs.Return}.
+
+{DiagramMsgs.Notes}
+[ Constraint is "{DiagramMsgs.Constraint}".  Return is {DiagramMsgs.IsReturn}.  Iteration is {DiagramMsgs.IsIteration}.  New group is {DiagramMsgs.IsNewGroup}.  Life cycle is {DiagramMsgs.Lifecycle}. ]
+
+< messages
+
+
+
+< diagram
+
+element >
+{Template - Template Selector}
+embedded elements >
+< embedded elements
+diagram >
+< diagram
+child elements >
+< child elements
+< element
+< package
